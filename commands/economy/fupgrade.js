@@ -72,7 +72,6 @@ $onlyForIds[$botownerid;896846485805744168;n o t  f o r  y o u]
 $else
 **Not a valid rod**
 $endif
-$endif 
 $endif
 $endif
 $endif
