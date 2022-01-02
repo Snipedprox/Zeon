@@ -1,32 +1,29 @@
-module.epxorts = {
-name: "pickaxe",
+module.exports = {
+name: "rod",
 $if: "v4",
-aliases: ['pick','paxe'],
+aliases: ['fishing','frod','frishing'],
 code: `
 $if[$message[1]==]
-$title[1;**Pickaxe commands**]
+$title[1;**Fishing rod**]
 $color[1;$getVar[color]]
-$image[1;https://media.discordapp.net/attachments/924833272121413652/926545972790702131/0320033e-68e4-413c-83de-43a19ac4c2fb_static.png]
+$thumbnail[1;https://cdn.discordapp.com/icons/565375575930437632/73ee226c8ace84b3f71e129bc9d0ea82.webp?size=40]
 $description[1;
-**Pickaxe stats
-Basic information about the available pickaxe commands in order to run a sumbcommand you just do \`$getServerVar[prefix]pickaxe < subcommand >\` not that hard**
+**== Fishing rod commands==**
 
-**Subcommands
-\`\`\`
-stats , list , upgrade , fix\`\`\`**
+**Subcommands**
+**\`\`\`diff
+- stats , list , repair \`\`\`**
 
-**Aliases
-\`\`\`
-pickaxe , pick , paxe\`\`\`**]
+**Aliases**
+**\`\`\`xml
+rod , fishing , frod , frishing\`\`\`**]
 $else
 $if[$message[1]==stats]
-$title[1;**$username[$get[u]]'s pickaxe stats**]
-$thumbnail[1;$useravatar[$get[u]]]
 $color[1;$getVar[color]]
+$title[1;**$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rod];plastic;<:plasticrod:925107841528905808>];old;<:oldrod:925107841432432640>];wood;<:woodrod:925107842028044389>];metal;<:lavarod:925107841033986088>];lava;<:lavarod:925107841033986088>];dev;<:Developerod:925107839830216704>] Fishing rods**]
 $description[1;
-**Pickaxe: $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[pickaxe];silver;<:silverpickaxe:926548290277875712>];gold;<:goldpickaxe:926548373358641193>];candy;<:candypickaxe:926548448650621008>];amethyst;<:amethystpickaxe:926548560714010694>];spectre;<:spectre:926548638065389668>];legendary;<:legendarypickaxe:926548756147617812>];dev;<:devclaw:926548826150567998>] $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[pickaxe];silver;Silver pickaxe];gold;Gold pickaxe];candy;Candy pickaxe];amethyst;Amethyst pickaxe];spectre;Spectre pickaxe];legendary;Legendary pickaxe];dev;Claws]**
-**Durability: **[$repeatMessage[$getGlobalUserVar[durability;$get[u]];$replaceText[$getGlobalUserVar[durability;$get[u]];$getGlobalUserVar[durability;$get[u]];■]]]($getBotInvite)**]
-$let[u;$findUser[$message[2];yes]]
+**Fishing rod:** **$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rod];plastic;<:plasticrod:925107841528905808>];old;<:oldrod:925107841432432640>];wood;<:woodrod:925107842028044389>];metal;<:lavarod:925107841033986088>];lava;<:lavarod:925107841033986088>];dev;<:Developerod:925107839830216704>] $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rod];plastic;Plastic rod];old;Old rod];wood;Wooden rod];metal;Metal rod];enchant;Enchanted rod];sea;Ocean rod];gold;Golden rod];diamond;Diamond rod];emerald;Emerald rod];ruby;Ruby rod];obsidian;Obsidian rod];lava;Lava rod];dev;Developer rod]**
+**Durability:** **[$repeatMessage[$getGlobalUserVar[fd];$replaceText[$getGlobalUserVar[fd];$getGlobalUserVar[fd];■]]]($getBotInvite)** ]
 $else
 $if[$message[1]==list]
 $title[1;**$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$getGlobalUserVar[rod];plastic;<:plasticrod:925107841528905808>];old;<:oldrod:925107841432432640>];wood;<:woodrod:925107842028044389>];metal;<:lavarod:925107841033986088>];lava;<:lavarod:925107841033986088>];dev;<:Developerod:925107839830216704>] Fishing rod list**]
